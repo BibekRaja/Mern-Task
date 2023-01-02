@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      /* body {
+        padding: 25px;
+        background-color: white;
+        color: black;
+        font-size: 25px;
+      } */
+
+      .dark-mode {
+        background-color: black;
+        color: white;
+      }
+      .gone {
+        background-color: black;
+        /* border: none; */
+      }
+      .light-mode {
+        background-color: white;
+        color: black;
+      }
+      .visible {
+        background-color: whitesmoke;
+      }
+    </style>
+  </head>
+
+  <body id="body">
+    <pre>
+        when we click the dark theme button, the background color of page should be dark and vice versa.
+
+        and if it is dark theme, the button-dark theme should not be displayed. 
+    </pre>
+
+    <button id="btn-dark" onclick="darkTheme()">dark theme</button>
+    <button id="btn-light" onclick="lightTheme()">light theme</button>
+
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam, illum
+      in eos porro, neque nulla, exercitationem repudiandae fugit qui eum
+      consequatur nostrum ad. Ea rem ipsam repellendus reiciendis dolores
+      officiis! Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+      Numquam, illum in eos porro, neque nulla, exercitationem repudiandae fugit
+      qui eum consequatur nostrum ad. Ea rem ipsam repellendus reiciendis
+      dolores officiis!
+    </p>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam, illum
+      in eos porro, neque nulla, exercitationem repudiandae fugit qui eum
+      consequatur nostrum ad. Ea rem ipsam repellendus reiciendis dolores
+      officiis! Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+      Numquam, illum in eos porro, neque nulla, exercitationem repudiandae fugit
+      qui eum consequatur nostrum ad. Ea rem ipsam repellendus reiciendis
+      dolores officiis!
+    </p>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam, illum
+      in eos porro, neque nulla, exercitationem repudiandae fugit qui eum
+      consequatur nostrum ad. Ea rem ipsam repellendus reiciendis dolores
+      officiis! Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+      Numquam, illum in eos porro, neque nulla, exercitationem repudiandae fugit
+      qui eum consequatur nostrum ad. Ea rem ipsam repellendus reiciendis
+      dolores officiis!
+    </p>
+    <script>
+      function darkTheme() {
+        var element = document.body;
+        element.className = "dark-mode";
+        var btn = document.getElementById("btn-dark");
+        btn.className = "gone";
+      }
+      function lightTheme() {
+        var element = document.body;
+        element.className = "light-mode";
+        var btn = document.getElementById("btn-dark");
+        btn.className = "visible";
+      }
+    </script>
+  </body>
+</html>
