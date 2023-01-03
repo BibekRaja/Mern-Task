@@ -2420,3 +2420,30 @@ let countries = [
     array functions
     
 */
+
+// first method
+
+// function findCountryCode(country) {
+//     for (let i = 0; i < countries.length; i++) {
+
+//         if (country == countries[i].name) {
+//             console.log(countries[i].code);
+//             break;
+//         }
+//     }
+// }
+// findCountryCode("Nepal");
+
+//   second method
+
+function findCountryCode(country) {
+    for (let i = 0; i < countries.length; i++) {
+
+        if (country == countries[i].name) {
+            return countries[i].code;
+
+        }
+    }
+}
+// findCountryCode("Nepal");
+console.log(findCountryCode("Nepal"));

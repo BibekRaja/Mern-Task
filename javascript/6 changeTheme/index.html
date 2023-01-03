@@ -39,8 +39,12 @@
         and if it is dark theme, the button-dark theme should not be displayed. 
     </pre>
 
-    <button id="btn-dark" onclick="darkTheme()">dark theme</button>
-    <button id="btn-light" onclick="lightTheme()">light theme</button>
+    <button id="btn-dark" onclick="changeTheme('black','white')">
+      dark theme
+    </button>
+    <button id="btn-light" onclick="changeTheme('white','black')">
+      light theme
+    </button>
 
     <p>
       Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam, illum
@@ -70,6 +74,12 @@
       dolores officiis!
     </p>
     <script>
+      let body_element = document.getElementById("body");
+
+      function changeTheme(bg_color, text_color) {
+        body_element.style.backgroundColor = bg_color;
+        body_element.style.color = text_color;
+      }
       function darkTheme() {
         var element = document.body;
         element.className = "dark-mode";
